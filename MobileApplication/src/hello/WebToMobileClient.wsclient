@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsclientconfig serviceType="class" version="1.0">
+    <client>
+        <project>MobileApplication4</project>
+        <class location="${src.dir}" type="hello.WebToMobileClient"/>
+        <property name="DataBinding" value="true"/>
+        <property name="floatingPoint" value="true"/>
+        <property name="createStubs" value="true"/>
+    </client>
+    <server>
+        <project path="G:\Documents and Settings\Rajesh\My Documents\NetBeansProjects\JSPExamples">JSPExamples</project>
+        <class location="${src.dir}" mapping="" type="gfgf.WebToMobileServlet"/>
+    </server>
+    <services>
+        <service>
+            <class type="compressionFilters.CompressionServletResponseWrapper">
+                <method name="setContentType">
+                    <return type="void"/>
+                    <param name="contentType" type="java.lang.String"/>
+                </method>
+                <method name="setCompressionThreshold">
+                    <return type="void"/>
+                    <param name="threshold" type="int"/>
+                </method>
+                <method name="setDebugLevel">
+                    <return type="void"/>
+                    <param name="debug" type="int"/>
+                </method>
+                <method name="createOutputStream">
+                    <return type="javax.servlet.ServletOutputStream"/>
+                </method>
+                <method name="finishResponse">
+                    <return type="void"/>
+                </method>
+                <method name="flushBuffer">
+                    <return type="void"/>
+                </method>
+                <method name="getOutputStream">
+                    <return type="javax.servlet.ServletOutputStream"/>
+                </method>
+                <method name="getWriter">
+                    <return type="java.io.PrintWriter"/>
+                </method>
+                <method name="setContentLength">
+                    <return type="void"/>
+                    <param name="length" type="int"/>
+                </method>
+            </class>
+            <class type="sessions.DummyCart">
+                <method name="setItem">
+                    <return type="void"/>
+                    <param name="name" type="java.lang.String"/>
+                </method>
+                <method name="setSubmit">
+                    <return type="void"/>
+                    <param name="s" type="java.lang.String"/>
+                </method>
+                <method name="getItems">
+                    <return type="java.lang.String[]"/>
+                </method>
+                <method name="processRequest">
+                    <return type="void"/>
+                    <param name="request" type="javax.servlet.http.HttpServletRequest"/>
+                </method>
+            </class>
+        </service>
+    </services>
+</wsclientconfig>
